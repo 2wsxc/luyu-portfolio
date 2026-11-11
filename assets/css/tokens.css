@@ -1,0 +1,53 @@
+/* 设计变量：一套深色主题，文字三级灰阶 + 一个暖色强调 */
+:root {
+  --bg: #0c0c0c;
+  --bg-elev: #141414;
+  --bg-elev-2: #1b1b1b;
+  --ink: #f2f0eb;
+  --ink-2: #b8b4ac;
+  --muted: #8a857d;
+  --line: rgba(255, 255, 255, 0.14);
+  --line-strong: rgba(255, 255, 255, 0.28);
+  --accent: #c6a174;
+  --accent-soft: rgba(198, 161, 116, 0.16);
+  --accent-ink: #0c0c0c;
+  --overlay: rgba(0, 0, 0, 0.55);
+
+  --font-serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", "SimSun", serif;
+  --font-sans: "Inter", "HarmonyOS Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", "Roboto Mono", Consolas, monospace;
+
+  --gutter: clamp(20px, 4vw, 64px);
+  --max: 1440px;
+  --narrow: 1120px;
+  --prose: 680px;
+  --nav-h: 72px;
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --t-fast: 160ms;
+  --t-base: 240ms;
+  --t-slow: 320ms;
+
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+  --space-7: 96px;
+  --section: 120px;
+}
+
+@media (max-width: 1023px) {
+  :root {
+    --nav-h: 64px;
+  }
+}
+
+@media (max-width: 639px) {
+  :root {
+    --nav-h: 56px;
+    --section: 64px;
+  }
+}

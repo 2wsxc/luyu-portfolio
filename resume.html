@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>简历 · 打印版 · 陆屿</title>
+<meta name="description" content="陆屿的在线简历：8 年风光与纪实摄影经验，可独立完成勘景、拍摄与调色全流程。">
+<meta name="theme-color" content="#0C0C0C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&family=Noto+Serif+SC:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body data-page="resume" data-nav="solid">
+<a class="skip-link" href="#main">跳到主要内容</a>
+
+<header class="nav nav--solid" id="nav">
+  <div class="nav__inner">
+    <a class="nav__brand" href="index.html" aria-label="陆屿 · 首页"><span>陆屿</span><em>LU YU</em></a>
+    <nav class="nav__links" aria-label="主导航">
+      <a href="works.html" data-nav="works">作品</a>
+      <a href="about.html" data-nav="about">关于</a>
+      <a href="resume.html" data-nav="resume">简历</a>
+    </nav>
+    <div class="nav__right">
+      <a class="nav__contact" href="contact.html" data-nav="contact">联系
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+      </a>
+      <button class="nav__burger" id="burger" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="menu" id="menu" aria-hidden="true">
+  <nav class="menu__links" aria-label="移动端导航">
+    <a href="index.html" style="--i:0"><span>01</span>首页</a>
+    <a href="works.html" data-nav="works" style="--i:1"><span>02</span>作品</a>
+    <a href="about.html" data-nav="about" style="--i:2"><span>03</span>关于</a>
+    <a href="resume.html" data-nav="resume" style="--i:3"><span>04</span>简历</a>
+    <a href="contact.html" style="--i:4"><span>05</span>联系</a>
+  </nav>
+  <div class="menu__foot">
+    <a class="menu__mail" href="mailto:luyu@example.com">luyu@example.com</a>
+    <div class="menu__social">
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.xiaohongshu.com/" target="_blank" rel="noopener">小红书</a>
+      <a href="https://www.bilibili.com/" target="_blank" rel="noopener">B 站</a>
+      <a href="https://vimeo.com/" target="_blank" rel="noopener">Vimeo</a>
+    </div>
+    <span class="menu__loc">HANGZHOU · CN</span>
+  </div>
+</div>
+
+<main class="page" id="main">
+  <section class="page-head">
+    <div class="wrap">
+      <div class="page-head__eyebrow"><span class="label">简历 / RESUME · 打印版</span></div>
+      <div class="page-head__row">
+        <h1 class="h1"><span data-resume-name>陆屿</span></h1>
+        <span class="page-head__count" data-resume-role>摄影师 / 摄像</span>
+      </div>
+      <p class="page-head__desc">山野、海岸与城市 · 2018 年至今 · 杭州，可异地出差</p>
+    </div>
+  </section>
+
+  <div class="resume-bar">
+    <div class="wrap resume-bar__inner">
+      <div class="resume-bar__id">
+        <span class="resume-bar__name" data-resume-name>陆屿</span>
+        <span class="resume-bar__role" data-resume-role></span>
+        <span class="resume-bar__role" data-resume-email></span>
+      </div>
+      <div class="resume-bar__actions">
+        <button class="resume-bar__mail" type="button" data-copy-email="luyu@example.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true" style="width:14px;height:14px"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg>
+          <span>复制邮箱</span>
+        </button>
+        <a class="btn" href="assets/files/resume-luyu-2026-11.pdf" download data-pdf-link data-no-print>下载 PDF</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap resume-body">
+    <section class="resume-block" aria-labelledby="rIntent">
+      <div class="resume-block__label">
+        <span class="label">01</span>
+        <h2 class="resume-block__title" id="rIntent">求职意向</h2>
+      </div>
+      <div class="intent-grid" id="intentGrid"></div>
+    </section>
+
+    <section class="resume-block" aria-labelledby="rSummary">
+      <div class="resume-block__label">
+        <span class="label">02</span>
+        <h2 class="resume-block__title" id="rSummary">个人简介</h2>
+      </div>
+      <p class="body" style="max-width:64ch" data-resume-summary></p>
+    </section>
+
+    <section class="resume-block" aria-labelledby="rExp">
+      <div class="resume-block__label">
+        <span class="label">03</span>
+        <h2 class="resume-block__title" id="rExp">工作经历</h2>
+      </div>
+      <div id="experienceList"></div>
+    </section>
+
+    <section class="resume-block" aria-labelledby="rProj">
+      <div class="resume-block__label">
+        <span class="label">04</span>
+        <h2 class="resume-block__title" id="rProj">项目经验</h2>
+      </div>
+      <div id="projectList"></div>
+    </section>
+
+    <section class="resume-block" aria-labelledby="rSkill">
+      <div class="resume-block__label">
+        <span class="label">05</span>
+        <h2 class="resume-block__title" id="rSkill">专业技能</h2>
+      </div>
+      <div class="skills-grid" id="skillsGrid"></div>
+    </section>
+
+    <section class="resume-block" aria-labelledby="rEdu">
+      <div class="resume-block__label">
+        <span class="label">06</span>
+        <h2 class="resume-block__title" id="rEdu">教育 / 荣誉</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px">
+        <div>
+          <p class="skill-group__title">教育</p>
+          <ul class="compact-list" id="eduList"></ul>
+        </div>
+        <div>
+          <p class="skill-group__title">荣誉</p>
+          <ul class="compact-list" id="awardList"></ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="resume-updated">
+      <span data-updated></span>
+      <span data-pdf-note></span>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="nav__brand" href="index.html"><span>陆屿</span><em>LU YU</em></a>
+        <p>风光摄影师，拍摄山野、海岸与城市。也拍摄短片与延时，为品牌与出版机构提供影像内容。</p>
+      </div>
+      <div>
+        <p class="footer__title">站点</p>
+        <div class="footer__links">
+          <a href="works.html">作品</a>
+          <a href="about.html">关于</a>
+          <a href="resume.html">简历</a>
+          <a href="contact.html">联系</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer__title">联系</p>
+        <div class="footer__links">
+          <a href="mailto:luyu@example.com">luyu@example.com</a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.xiaohongshu.com/" target="_blank" rel="noopener">小红书</a>
+          <a href="https://www.bilibili.com/" target="_blank" rel="noopener">B 站</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2018—<span data-year>2026</span> 陆屿 · 保留所有权利</span>
+      <span>本站作品版权归作者所有，未经授权请勿转载或商用。</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-bar" id="mobileBar">
+  <a class="btn" href="assets/files/resume-luyu-2026-11.pdf" download>下载简历</a>
+  <a class="btn btn--solid" href="contact.html">联系我</a>
+</div>
+
+<script src="data/site.js" defer></script>
+<script src="data/works.js" defer></script>
+<script src="data/series.js" defer></script>
+<script src="data/resume.js" defer></script>
+<script src="data/profile.js" defer></script>
+<script src="assets/js/core/data.js" defer></script>
+<script src="assets/js/core/ui.js" defer></script>
+<script src="assets/js/core/cards.js" defer></script>
+<script src="assets/js/core/nav.js" defer></script>
+<script src="assets/js/core/lightbox.js" defer></script>
+<script src="assets/js/core/reveal.js" defer></script>
+<script src="assets/js/core/resume-view.js" defer></script>
+<script src="assets/js/pages/resume.js" defer></script>
+</body>
+</html>

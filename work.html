@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>作品详情 · 陆屿</title>
+<meta name="description" content="陆屿的摄影作品详情：拍摄地点、时间、器材与系列背景。">
+<meta name="theme-color" content="#0C0C0C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&family=Noto+Serif+SC:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body data-page="work" data-nav="solid" data-mobilebar="off">
+<a class="skip-link" href="#main">跳到主要内容</a>
+
+<header class="nav nav--solid" id="nav">
+  <div class="nav__inner">
+    <a class="nav__brand" href="index.html" aria-label="陆屿 · 首页"><span>陆屿</span><em>LU YU</em></a>
+    <nav class="nav__links" aria-label="主导航">
+      <a href="works.html" data-nav="works">作品</a>
+      <a href="about.html" data-nav="about">关于</a>
+      <a href="resume.html" data-nav="resume">简历</a>
+    </nav>
+    <div class="nav__right">
+      <a class="nav__contact" href="contact.html" data-nav="contact">联系
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+      </a>
+      <button class="nav__burger" id="burger" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="menu" id="menu" aria-hidden="true">
+  <nav class="menu__links" aria-label="移动端导航">
+    <a href="index.html" style="--i:0"><span>01</span>首页</a>
+    <a href="works.html" data-nav="works" style="--i:1"><span>02</span>作品</a>
+    <a href="about.html" data-nav="about" style="--i:2"><span>03</span>关于</a>
+    <a href="resume.html" data-nav="resume" style="--i:3"><span>04</span>简历</a>
+    <a href="contact.html" style="--i:4"><span>05</span>联系</a>
+  </nav>
+  <div class="menu__foot">
+    <a class="menu__mail" href="mailto:luyu@example.com">luyu@example.com</a>
+    <div class="menu__social">
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.xiaohongshu.com/" target="_blank" rel="noopener">小红书</a>
+      <a href="https://www.bilibili.com/" target="_blank" rel="noopener">B 站</a>
+      <a href="https://vimeo.com/" target="_blank" rel="noopener">Vimeo</a>
+    </div>
+    <span class="menu__loc">HANGZHOU · CN</span>
+  </div>
+</div>
+
+<main class="page" id="main">
+  <section class="work-head">
+    <div class="wrap">
+      <div class="work-head__top">
+        <a class="back-link" id="workBack" href="works.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+          <span>返回作品</span>
+        </a>
+        <div style="display:flex;align-items:center;gap:4px">
+          <span class="work-head__no" id="workNo"></span>
+          <button class="btn btn--quiet" type="button" data-share>分享</button>
+        </div>
+      </div>
+      <h1 class="work-head__title" id="workTitle"></h1>
+      <p class="work-head__sub" id="workSub"></p>
+    </div>
+  </section>
+
+  <div class="wrap" id="workMedia"></div>
+
+  <section class="wrap section section--tight" id="workInfo" aria-label="作品信息"></section>
+
+  <section class="wrap work-recs" id="workRecs" aria-label="相关作品"></section>
+
+  <div class="wrap">
+    <nav class="work-pager" id="workPager" aria-label="作品翻页"></nav>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="nav__brand" href="index.html"><span>陆屿</span><em>LU YU</em></a>
+        <p>风光摄影师，拍摄山野、海岸与城市。也拍摄短片与延时，为品牌与出版机构提供影像内容。</p>
+      </div>
+      <div>
+        <p class="footer__title">站点</p>
+        <div class="footer__links">
+          <a href="works.html">作品</a>
+          <a href="about.html">关于</a>
+          <a href="resume.html">简历</a>
+          <a href="contact.html">联系</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer__title">联系</p>
+        <div class="footer__links">
+          <a href="mailto:luyu@example.com">luyu@example.com</a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.xiaohongshu.com/" target="_blank" rel="noopener">小红书</a>
+          <a href="https://www.bilibili.com/" target="_blank" rel="noopener">B 站</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2018—<span data-year>2026</span> 陆屿 · 保留所有权利</span>
+      <span>本站作品版权归作者所有，未经授权请勿转载或商用。</span>
+    </div>
+  </div>
+</footer>
+
+<script src="data/site.js" defer></script>
+<script src="data/works.js" defer></script>
+<script src="data/series.js" defer></script>
+<script src="data/resume.js" defer></script>
+<script src="data/profile.js" defer></script>
+<script src="assets/js/core/data.js" defer></script>
+<script src="assets/js/core/ui.js" defer></script>
+<script src="assets/js/core/cards.js" defer></script>
+<script src="assets/js/core/nav.js" defer></script>
+<script src="assets/js/core/lightbox.js" defer></script>
+<script src="assets/js/core/reveal.js" defer></script>
+<script src="assets/js/pages/work.js" defer></script>
+</body>
+</html>
