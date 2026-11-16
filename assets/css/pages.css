@@ -721,6 +721,14 @@
   aspect-ratio: 3 / 4;
 }
 
+.about-portrait--id {
+  aspect-ratio: 1400 / 1158;
+}
+
+.about-portrait--id img {
+  object-fit: contain;
+}
+
 .about-intro__text {
   padding-top: 8px;
 }
@@ -818,6 +826,32 @@
 }
 
 /* ── 简历 ───────────────────────────────────────────── */
+.resume-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: clamp(24px, 4vw, 56px);
+}
+
+.resume-head__main {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.resume-head__photo {
+  flex: 0 0 auto;
+  width: clamp(108px, 11vw, 148px);
+  margin: 0;
+  border: 1px solid var(--line);
+  background: var(--bg-elev);
+}
+
+.resume-head__photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .resume-bar {
   position: sticky;
   top: var(--nav-h);
@@ -1443,6 +1477,21 @@
   .page-head {
     padding-top: 0;
     padding-bottom: 10pt;
+  }
+
+  .resume-head {
+    gap: 10mm;
+  }
+
+  .resume-head__photo {
+    width: 26mm;
+    border-color: #ccc;
+    background: #fff;
+  }
+
+  .exp-item__role,
+  .project-item__note {
+    display: none !important;
   }
 
   .h1 {

@@ -9,8 +9,14 @@
 
     var portrait = document.getElementById("aboutPortrait");
     if (portrait) {
-      portrait.innerHTML = '<img data-fade src="' + d.portrait +
-        '" alt="珠峰 · 日照金山，2026" loading="eager" decoding="async">';
+      if (p.photo) {
+        portrait.classList.add("about-portrait--id");
+        portrait.innerHTML = '<img data-fade src="' + p.photo +
+          '" alt="肖杰证件照" loading="eager" decoding="async">';
+      } else {
+        portrait.innerHTML = '<img data-fade src="' + d.portrait +
+          '" alt="珠峰 · 日照金山，2026" loading="eager" decoding="async">';
+      }
     }
 
     var intro = document.getElementById("aboutIntro");
