@@ -8,6 +8,16 @@
     return '<span class="dots" aria-label="' + level + " / 5\">" + out + "</span>";
   }
 
+  function expMedia(list) {
+    if (!list || !list.length) return "";
+    return '<div class="exp-media">' + list.map(function (m) {
+      if (m.type === "video") {
+        return '<figure class="exp-media__item"><video src="' + LY.ui.esc(m.src) + '" muted playsinline loop autoplay preload="metadata"></video></figure>';
+      }
+      return '<figure class="exp-media__item"><img src="' + LY.ui.esc(m.src) + '" alt="' + LY.ui.esc(m.alt || "") + '" loading="lazy" decoding="async"></figure>';
+    }).join("") + "</div>";
+  }
+
   function expItem(e) {
     var sub = [e.role, e.location].filter(Boolean).join(" · ");
     return '<div class="exp-item"><div>' +
@@ -16,7 +26,7 @@
       '<span class="exp-item__time">' + LY.ui.esc(e.period) + "</span>" +
       '<ul class="exp-item__points">' +
       (e.points || []).map(function (p) { return "<li>" + LY.ui.esc(p) + "</li>"; }).join("") +
-      "</ul></div>";
+      "</ul>" + expMedia(e.media) + "</div>";
   }
 
   function projItem(p, byId) {

@@ -27,6 +27,10 @@
         role: "自主接单",
         period: "2024 — 2025",
         location: "",
+        media: [
+          { type: "image", src: "assets/img/resume/marathon-photo.jpg", alt: "马拉松赛道拍摄现场" },
+          { type: "video", src: "assets/video/marathon-clip.mp4" }
+        ],
         points: [
           "独立承接两场马拉松赛事的赛道拍摄，负责机位规划、现场抓拍与选手识别",
           "赛后完成选片与出片交付，两场累计收入约 1000 元"
