@@ -33,9 +33,8 @@
 
     var stats = document.getElementById("introStats");
     if (stats) {
-      var years = new Date().getFullYear() - 2018;
       var items = [
-        [years, "年从业"],
+        [2, "场马拉松赛道"],
         [d.worksCount, "件作品"],
         [d.seriesCount, "个系列"]
       ];

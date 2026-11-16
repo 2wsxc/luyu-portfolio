@@ -55,6 +55,25 @@
   color: var(--accent);
 }
 
+.btn--outline-accent {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.btn--outline-accent:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+}
+
+.btn--outline-accent svg {
+  transition: transform var(--t-base) var(--ease);
+}
+
+.btn--outline-accent:hover svg {
+  transform: translateX(3px);
+}
+
 .btn[disabled],
 .btn.is-disabled {
   opacity: 0.3;

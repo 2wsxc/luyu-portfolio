@@ -105,11 +105,13 @@
 
   function readFilters() {
     var s = queryParam("series");
+    var t = queryParam("type");
     return {
       series: s && seriesBySlug[s] ? s : "all",
       region: validValue(REGIONS, queryParam("region")) || "all",
       season: validValue(SEASONS, queryParam("season")) || "all",
       time: validValue(TIMES, queryParam("time")) || "all",
+      type: t === "photo" || t === "video" ? t : "all",
       sort: queryParam("sort") === "latest" ? "latest" : "featured"
     };
   }
@@ -118,6 +120,7 @@
     opts = opts || {};
     var pool = opts.pool ? opts.pool.slice() : works.slice();
     var out = pool.filter(function (w) {
+      if (f.type && f.type !== "all" && w.type !== f.type) return false;
       if (f.series && f.series !== "all" && w.series !== f.series) return false;
       if (f.region && f.region !== "all" && w.region !== f.region) return false;
       if (f.season && f.season !== "all" && w.season !== f.season) return false;
@@ -130,7 +133,7 @@
 
   function activeFilterCount(f) {
     var n = 0;
-    ["region", "season", "time"].forEach(function (k) { if (f[k] && f[k] !== "all") n++; });
+    ["type", "region", "season", "time"].forEach(function (k) { if (f[k] && f[k] !== "all") n++; });
     return n;
   }
 

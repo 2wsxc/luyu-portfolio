@@ -126,6 +126,7 @@
       els.filterBody.appendChild(wrap);
     }
 
+    row("类型", [{ value: "photo", label: "照片" }, { value: "video", label: "影像" }], "type");
     row("地域", d.regions, "region");
     row("季节", d.seasons, "season");
     row("时段", d.times, "time");
@@ -160,6 +161,7 @@
   function updateURL() {
     var params = [];
     if (state.series !== "all") params.push("series=" + encodeURIComponent(state.series));
+    if (state.type !== "all") params.push("type=" + encodeURIComponent(state.type));
     if (state.region !== "all") params.push("region=" + encodeURIComponent(state.region));
     if (state.season !== "all") params.push("season=" + encodeURIComponent(state.season));
     if (state.time !== "all") params.push("time=" + encodeURIComponent(state.time));
@@ -189,7 +191,7 @@
       var inList = {};
       list.forEach(function (w) { if (w.series) inList[w.series] = 1; });
       var seriesN = Object.keys(inList).length;
-      els.headCount.textContent = list.length + " 张" + (seriesN ? " / " + seriesN + " 个系列" : "");
+      els.headCount.textContent = list.length + " 件作品" + (seriesN ? " / " + seriesN + " 个系列" : "");
     }
 
     if (els.loadMore) {
@@ -221,14 +223,21 @@
     ui.qsa(".work-card", els.grid).forEach(function (card) {
       card.addEventListener("click", function (e) {
         if (e.metaKey || e.ctrlKey || e.shiftKey) return;
-        e.preventDefault();
         var id = card.getAttribute("data-work");
-        var idx = 0;
+        var current = null;
         for (var i = 0; i < list.length; i++) {
-          if (list[i].id === id) { idx = i; break; }
+          if (list[i].id === id) { current = list[i]; break; }
         }
         d.saveReturnState({ filters: state });
-        LY.lightbox.open(list.map(function (w) {
+        /* 视频直接进详情页播放，不打开只能看图的灯箱 */
+        if (!current || current.type === "video") return;
+        e.preventDefault();
+        var photos = list.filter(function (w) { return w.type !== "video"; });
+        var idx = 0;
+        for (var j = 0; j < photos.length; j++) {
+          if (photos[j].id === id) { idx = j; break; }
+        }
+        LY.lightbox.open(photos.map(function (w) {
           return {
             id: w.id,
             title: w.title,

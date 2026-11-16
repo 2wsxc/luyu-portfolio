@@ -2,24 +2,21 @@
 window.SITE_DATA = window.SITE_DATA || {};
 
 window.SITE_DATA.site = {
-  name: "陆屿",
-  nameEn: "LU YU",
-  role: "风光摄影师 / 摄像与延时",
-  direction: "自然 · 城市 · 延时",
+  name: "肖杰",
+  nameEn: "XIAO JIE",
+  role: "摄影 / 摄像 · 记录与后期",
+  direction: "纪实 · 户外 · 影像后期",
   city: "杭州",
   cityEn: "HANGZHOU · CN",
-  email: "luyu@example.com",
-  wechat: "luyu_photo",
-  heroWorkId: "w-014",
-  availability: "2026 年 12 月接受 1 个拍摄项目",
-  intro: "以山野与海岸为主要拍摄对象，长期记录光线在自然中的变化。也拍摄短片与延时，为品牌与出版机构提供影像内容。",
-  footerNote: "本站全部作品版权归陆屿所有，未经授权请勿转载或商用。",
-  copyright: "© 2018—2026 陆屿",
+  email: "2987963758@qq.com",
+  wechat: "18174083061",
+  heroWorkId: "w-512",
+  availability: "2028 届 · 可接拍摄与剪辑项目",
+  intro: "湖北中医药大学医学信息工程 2028 届本科在读。拍校园活动、马拉松赛道与户外风光，也做直播切片与短视频后期；熟练 PR / PS / LR，基本掌握 AE 与达芬奇。",
+  footerNote: "本站全部作品版权归肖杰所有，未经授权请勿转载或商用。",
+  copyright: "© 2023—2026 肖杰",
   social: [
-    { label: "Instagram", handle: "@luyu.photo", url: "https://www.instagram.com/" },
-    { label: "小红书", handle: "陆屿", url: "https://www.xiaohongshu.com/" },
-    { label: "B 站", handle: "陆屿的风景", url: "https://www.bilibili.com/" },
-    { label: "Vimeo", handle: "luyu", url: "https://vimeo.com/" }
+    { label: "B 站", handle: "虾条豆果", url: "https://space.bilibili.com/699969839" }
   ],
   nav: [
     { key: "works", label: "作品", href: "works.html" },

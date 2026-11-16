@@ -10,7 +10,7 @@
   function render404() {
     var main = document.getElementById("seriesMain");
     var recs = d.featured.slice(0, 3);
-    document.title = "系列不存在 · 陆屿";
+    document.title = "系列不存在 · 肖杰";
     if (!main) return;
     main.innerHTML =
       '<section class="wrap"><div class="empty" style="margin-top:calc(var(--nav-h) + 96px)">' +
@@ -33,7 +33,7 @@
       return;
     }
 
-    document.title = s.title + " · 陆屿";
+    document.title = s.title + " · 肖杰";
 
     var cover = document.getElementById("seriesCover");
     if (cover) {

@@ -228,7 +228,7 @@ select {
 }
 
 .js .page {
-  animation: page-in 520ms var(--ease) both;
+  animation: page-in 520ms var(--ease);
 }
 
 body.is-leaving .page {

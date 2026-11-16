@@ -8,7 +8,7 @@
   function pad(n) { return n < 10 ? "0" + n : String(n); }
 
   function render404(id) {
-    document.title = "作品不存在 · 陆屿";
+    document.title = "作品不存在 · 肖杰";
     var main = document.getElementById("main");
     var recs = d.featured.slice(0, 3);
     main.innerHTML =
@@ -65,17 +65,20 @@
     var wrap = document.getElementById("workMedia");
     if (!w) return;
     if (w.type === "video") {
-      var src = (w.video && w.video.src) || "";
-      var duration = (w.video && w.video.duration) || "";
+      var v = w.video || {};
+      var src = v.src || "";
+      var duration = v.duration || "";
+      var note = [duration, v.resolution || "", v.fps ? v.fps + "fps" : ""].filter(Boolean).join(" · ");
       wrap.className = "work-media work-media--video";
       wrap.innerHTML =
         '<div class="video-shell" id="videoShell">' +
-        '<img data-fade src="' + w.image + '" alt="' + ui.esc(w.title + "，视频封面") + '" fetchpriority="high" decoding="async">' +
         (src
-          ? '<video id="workVideo" playsinline preload="none" poster="' + w.image + '" src="' + src + '"></video>'
-          : "") +
+          ? '<video id="workVideo" controls playsinline webkit-playsinline preload="none" poster="' + w.image + '" src="' + src + '"></video>'
+          : '<img data-fade src="' + w.image + '" alt="' + ui.esc(w.title + "，视频封面") + '" fetchpriority="high" decoding="async">') +
         '<button class="video-shell__btn" type="button" id="videoPlay" aria-label="播放 ' + ui.esc(w.title) + '"><span>' + ui.icon("play") + "</span></button>" +
-        '<span class="video-shell__note">' + ui.esc(duration) + " · 4K · 24fps</span>" +
+        '<span class="video-shell__note">' + ui.esc(note) +
+        (v.external ? ' · <a href="' + ui.esc(v.external) + '" target="_blank" rel="noopener">在 B 站观看</a>' : "") +
+        "</span>" +
         "</div>";
       var btn = document.getElementById("videoPlay");
       var video = document.getElementById("workVideo");
@@ -90,9 +93,11 @@
       if (btn) {
         btn.addEventListener("click", function () {
           if (video) {
-            video.play().catch(function () { ui.toast("视频加载失败，可在 B 站观看完整版"); });
+            video.play().catch(function () { ui.toast("视频加载失败，可稍后重试"); });
+          } else if (v.external) {
+            window.open(v.external, "_blank", "noopener");
           } else {
-            ui.toast("短片完整版发布在 B 站，可在联系页获取链接");
+            ui.toast("视频准备中");
           }
         });
       }
@@ -124,16 +129,31 @@
 
   function renderInfo(w) {
     var box = document.getElementById("workInfo");
-    var rows = w.exif ? [
+
+    var base = [
+      ["地点", w.location],
+      ["日期", w.date ? d.formatDate(w.date) : ""],
+      ["时段", w.timeLabel],
+      ["季节", w.seasonLabel],
+      ["系列", w.seriesTitle]
+    ];
+    if (w.type === "video" && w.video) {
+      base.push(["时长", w.video.duration]);
+      base.push(["规格", [w.video.resolution, w.video.fps ? w.video.fps + "fps" : ""].filter(Boolean).join(" · ")]);
+    }
+
+    var exifRows = w.exif ? [
       ["机身", w.exif.camera],
       ["镜头", w.exif.lens],
       ["焦距", w.exif.focal],
       ["光圈", w.exif.aperture],
       ["快门", w.exif.shutter],
       ["ISO", w.exif.iso]
-    ].filter(function (r) { return r[1]; }) : [];
+    ] : [];
 
+    var rows = base.concat(exifRows).filter(function (r) { return r[1]; });
     var tags = (w.tags || []).map(function (t) { return '<span class="tag">' + ui.esc(t) + "</span>"; }).join("");
+    var label = w.type === "video" ? "影像信息" : "拍摄信息";
 
     box.innerHTML =
       '<div class="work-info' + (w.description ? "" : " work-info--single") + '">' +
@@ -141,19 +161,13 @@
         ? '<div><p class="work-info__desc">' + ui.esc(w.description) + "</p>" +
           (tags ? '<div class="work-info__tags"><div class="tags">' + tags + "</div></div>" : "") +
           "</div>"
-        : "") +
-      "<div class=\"work-info__table\">" +
-      (w.exif
-        ? '<p class="label">拍摄信息</p><table class="meta-table"><tbody>' +
+        : (tags ? '<div class="work-info__tags"><div class="tags">' + tags + "</div></div>" : "")) +
+      '<div class="work-info__table">' +
+      (rows.length
+        ? '<p class="label">' + label + '</p><table class="meta-table"><tbody>' +
           rows.map(function (r) { return "<tr><th>" + r[0] + "</th><td>" + ui.esc(r[1]) + "</td></tr>"; }).join("") +
           "</tbody></table>"
-        : (w.type === "video"
-            ? '<p class="label">影像信息</p><table class="meta-table"><tbody>' +
-              "<tr><th>类型</th><td>航拍短片</td></tr>" +
-              "<tr><th>时长</th><td>" + ui.esc((w.video && w.video.duration) || "") + "</td></tr>" +
-              "<tr><th>拍摄地</th><td>" + ui.esc(w.location) + "</td></tr>" +
-              "</tbody></table>"
-            : "")) +
+        : "") +
       "</div>" +
       "</div>";
   }
@@ -166,7 +180,7 @@
       return;
     }
 
-    document.title = w.title + " · " + w.location + " · 陆屿";
+    document.title = w.title + " · " + w.location + " · 肖杰";
 
     var ret = d.readReturnState();
     var list = buildList(ret);

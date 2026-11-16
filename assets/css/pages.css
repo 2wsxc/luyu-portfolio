@@ -546,11 +546,42 @@
   overflow: hidden;
 }
 
-.video-shell video,
+.video-shell video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: cover;
+  background: #000;
+}
+
 .video-shell img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  cursor: default;
+}
+
+.video-shell.is-playing .video-shell__note {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.film-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 4px;
+}
+
+.film-cta p {
+  max-width: 46ch;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
 }
 
 .video-shell__btn {
@@ -1561,12 +1592,6 @@
 
   .project-item__link {
     color: #555;
-  }
-
-  .project-item__link::after {
-    content: " (luyu.photo)";
-    font-size: 8pt;
-    color: #777;
   }
 
   /* 首页简历的打印形态 */

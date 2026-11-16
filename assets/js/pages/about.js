@@ -10,7 +10,7 @@
     var portrait = document.getElementById("aboutPortrait");
     if (portrait) {
       portrait.innerHTML = '<img data-fade src="' + d.portrait +
-        '" alt="南迦巴瓦的日落，2025" loading="eager" decoding="async">';
+        '" alt="珠峰 · 日照金山，2026" loading="eager" decoding="async">';
     }
 
     var intro = document.getElementById("aboutIntro");
@@ -38,11 +38,11 @@
 
     var gear = document.getElementById("gear");
     if (gear) {
-      var groups = [["机身", p.gear.body], ["镜头", p.gear.lens], ["附件", p.gear.accessory]];
+      var groups = [["后期", p.gear.body], ["拍摄", p.gear.lens], ["其他", p.gear.accessory]];
       gear.innerHTML = groups.map(function (g, i) {
         return '<div class="accordion__item' + (i === 0 ? " is-open" : "") + '">' +
           '<button class="accordion__trigger" type="button" aria-expanded="' + (i === 0) + '">' +
-          "<span>器材 · " + g[0] + "</span><span class=\"accordion__icon\"></span></button>" +
+          "<span>工具 · " + g[0] + "</span><span class=\"accordion__icon\"></span></button>" +
           '<div class="accordion__panel"><div class="accordion__inner"><div class="accordion__content">' +
           '<ul class="gear-group">' +
           g[1].map(function (item) { return "<li>" + ui.esc(item) + "</li>"; }).join("") +
