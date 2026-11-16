@@ -9,9 +9,10 @@
   }
 
   function expItem(e) {
+    var sub = [e.role, e.location].filter(Boolean).join(" · ");
     return '<div class="exp-item"><div>' +
       '<p class="exp-item__org">' + LY.ui.esc(e.org) + "</p>" +
-      '<p class="exp-item__role">' + LY.ui.esc(e.role) + " · " + LY.ui.esc(e.location) + "</p></div>" +
+      (sub ? '<p class="exp-item__role">' + LY.ui.esc(sub) + "</p>" : "") + "</div>" +
       '<span class="exp-item__time">' + LY.ui.esc(e.period) + "</span>" +
       '<ul class="exp-item__points">' +
       (e.points || []).map(function (p) { return "<li>" + LY.ui.esc(p) + "</li>"; }).join("") +
