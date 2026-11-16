@@ -11,10 +11,11 @@
   function expMedia(list) {
     if (!list || !list.length) return "";
     return '<div class="exp-media">' + list.map(function (m) {
+      var cls = "exp-media__item" + (m.wide ? " exp-media__item--wide" : "");
       if (m.type === "video") {
-        return '<figure class="exp-media__item"><video src="' + LY.ui.esc(m.src) + '" muted playsinline loop autoplay preload="metadata"></video></figure>';
+        return '<figure class="' + cls + '"><video src="' + LY.ui.esc(m.src) + '" muted playsinline loop autoplay preload="metadata"></video></figure>';
       }
-      return '<figure class="exp-media__item"><img src="' + LY.ui.esc(m.src) + '" alt="' + LY.ui.esc(m.alt || "") + '" loading="lazy" decoding="async"></figure>';
+      return '<figure class="' + cls + '"><img src="' + LY.ui.esc(m.src) + '" alt="' + LY.ui.esc(m.alt || "") + '" loading="lazy" decoding="async"></figure>';
     }).join("") + "</div>";
   }
 

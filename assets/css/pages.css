@@ -1040,6 +1040,11 @@
   background: var(--bg-elev);
 }
 
+.exp-media__item--wide {
+  aspect-ratio: 3 / 2;
+  width: clamp(150px, 19vw, 196px);
+}
+
 .exp-media__item img,
 .exp-media__item video {
   display: block;

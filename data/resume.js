@@ -16,6 +16,10 @@
         role: "",
         period: "2024.09 — 至今",
         location: "",
+        media: [
+          { type: "image", src: "assets/img/resume/campus-1.jpg", alt: "校级活动拍摄现场", wide: true },
+          { type: "image", src: "assets/img/resume/campus-2.jpg", alt: "校级活动拍摄现场", wide: true }
+        ],
         points: [
           "负责校级重大活动与会议的现场拍摄，累计 7 场，包括中医药科技成果路演转接会、校运动会等",
           "独立完成机位选择与连拍抓拍，活动后按宣传节点完成选片、初修与成片交付",
