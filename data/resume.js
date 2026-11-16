@@ -103,7 +103,7 @@
     pdf: {
       path: "assets/files/resume-xiaojie-2026-11.pdf",
       updatedAt: "2026-11",
-      size: "约 518 KB"
+      size: "约 500 KB"
     }
   };
 })();

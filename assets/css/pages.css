@@ -126,6 +126,14 @@
   margin: 0;
 }
 
+.intro__portrait--id .media {
+  aspect-ratio: 1400 / 1158;
+}
+
+.intro__portrait--id .media > img {
+  object-fit: contain;
+}
+
 .intro__portrait figcaption {
   margin-top: 10px;
   font-family: var(--font-mono);
@@ -712,7 +720,7 @@
 /* ── 关于 ───────────────────────────────────────────── */
 .about-intro {
   display: grid;
-  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
   gap: clamp(32px, 6vw, 80px);
   align-items: start;
 }
@@ -840,7 +848,7 @@
 
 .resume-head__photo {
   flex: 0 0 auto;
-  width: clamp(108px, 11vw, 148px);
+  width: clamp(124px, 12.5vw, 172px);
   margin: 0;
   border: 1px solid var(--line);
   background: var(--bg-elev);
@@ -1484,13 +1492,14 @@
   }
 
   .resume-head__photo {
-    width: 26mm;
+    width: 30mm;
     border-color: #ccc;
     background: #fff;
   }
 
   .exp-item__role,
-  .project-item__note {
+  .project-item__note,
+  .project-item__link {
     display: none !important;
   }
 
