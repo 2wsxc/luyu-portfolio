@@ -45,6 +45,10 @@
         role: "设备运维 / 后期剪辑",
         period: "在校期间 · 2 个月",
         location: "",
+        media: [
+          { type: "image", src: "assets/img/resume/live-1.jpg", alt: "中医药文化宣传直播现场", wide: true },
+          { type: "image", src: "assets/img/resume/live-2.jpg", alt: "中医药文化宣传直播现场" }
+        ],
         points: [
           "负责直播设备调试与现场运维，处理音视频链路与突发故障，保障直播顺利进行",
           "承担直播后期切片剪辑，产出可二次传播的短视频素材"
