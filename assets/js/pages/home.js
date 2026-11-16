@@ -14,7 +14,7 @@
 
     var portrait = document.getElementById("portraitImg");
     if (portrait) {
-      portrait.src = (d.profile && d.profile.photo) || d.portrait;
+      portrait.src = d.portrait;
       ui.wireImage(portrait);
     }
 
