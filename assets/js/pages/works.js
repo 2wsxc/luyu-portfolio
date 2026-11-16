@@ -76,7 +76,7 @@
       if (!w.series) return;
       seriesCounts[w.series] = (seriesCounts[w.series] || 0) + 1;
     });
-    els.seriesChips.appendChild(chip("all", "全部", d.worksCount, state.series === "all", function () {
+    els.seriesChips.appendChild(chip("all", "全部", d.works.filter(function (w) { return w.type !== "video"; }).length, state.series === "all", function () {
       state.series = "all";
       commit();
     }));
@@ -126,7 +126,6 @@
       els.filterBody.appendChild(wrap);
     }
 
-    row("类型", [{ value: "photo", label: "照片" }, { value: "video", label: "影像" }], "type");
     row("地域", d.regions, "region");
     row("季节", d.seasons, "season");
     row("时段", d.times, "time");
@@ -175,7 +174,7 @@
   /* ── 网格 ───────────────────────────────────────── */
   function renderGrid(reset) {
     if (!els.grid) return;
-    list = d.filterWorks(state);
+    list = d.filterWorks(state).filter(function (w) { return w.type !== "video"; });
     if (reset) shown = PAGE;
 
     var slice = list.slice(0, shown);
@@ -249,6 +248,17 @@
         }), idx, card);
       });
     });
+  }
+
+  /* ── 影像区 ─────────────────────────────────────── */
+  function renderFilm() {
+    var box = document.getElementById("filmGrid");
+    if (!box) return;
+    var vids = d.works.filter(function (w) { return w.type === "video"; });
+    box.innerHTML = vids.map(function (w, i) {
+      return cards.workCard(w, i, { reveal: false });
+    }).join("");
+    cards.mountImages(box);
   }
 
   function clearAll() {
@@ -342,11 +352,13 @@
   function init() {
     cache();
     restoreScroll();
+    state.type = "all";
     renderSeries();
     renderChips();
     renderFilterPanel();
     renderSort();
     renderGrid(true);
+    renderFilm();
     setupPanel();
     setupLoadMore();
     cards.mountImages(document);

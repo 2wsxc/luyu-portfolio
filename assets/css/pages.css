@@ -568,6 +568,11 @@
   visibility: hidden;
 }
 
+.film-grid {
+  margin-top: clamp(20px, 3vw, 32px);
+  margin-bottom: clamp(20px, 3vw, 28px);
+}
+
 .film-cta {
   display: flex;
   flex-wrap: wrap;
@@ -1471,7 +1476,7 @@
   }
 
   .exp-item {
-    padding-block: 7pt;
+    padding-block: 5pt;
   }
 
   .exp-item__org {
@@ -1497,7 +1502,7 @@
   }
 
   .project-item {
-    padding-block: 5pt;
+    padding-block: 4pt;
   }
 
   .project-item__name {
@@ -1513,7 +1518,7 @@
   }
 
   .compact-list li {
-    padding-block: 4pt;
+    padding-block: 3pt;
     font-size: 9.5pt;
   }
 
@@ -1552,7 +1557,7 @@
   .resume-block {
     grid-template-columns: 32mm 1fr;
     gap: 8mm;
-    padding-block: 6pt;
+    padding-block: 5pt;
     border-top: 1px solid #ddd;
     break-inside: auto;
   }

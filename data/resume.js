@@ -4,12 +4,12 @@
 
   window.SITE_DATA.resume = {
     intent: {
-      role: "摄影 / 摄像（活动纪实 · 短视频）",
+      role: "摄影 / 摄像",
       city: "杭州，可接受异地",
       start: "在校期间可实习，2028 年毕业后可全职",
       type: "实习 / 全职"
     },
-    summary: "湖北中医药大学医学信息工程 2028 届本科在读。校学生会宣传部摄影师，累计完成 7 场校级活动与会议的拍摄与交付；独立完成两场马拉松赛道商业拍摄；熟练 Premiere、Photoshop、Lightroom，基本掌握 After Effects 与达芬奇，可独立完成拍摄、剪辑、调色与素材归档。",
+    summary: "湖北中医药大学医学信息工程 2028 届本科在读。校学生会宣传部摄影师，累计完成 7 场校级活动与会议的拍摄与交付；独立完成两场马拉松赛道商业拍摄；熟练 Premiere、Photoshop、Lightroom，基本掌握 After Effects 与达芬奇，可独立完成拍摄、剪辑、调色与素材归档。手机 / 微信：18174083061。",
     experience: [
       {
         org: "校学生会宣传部",
