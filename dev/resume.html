@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>肖杰 · 软件开发实习 · 简历</title>
+<style>
+:root{
+  --ink:#15181d; --ink-2:#454b54; --muted:#767d87; --line:#e2e4e8; --accent:#1d7f68;
+  --mono:"JetBrains Mono","SFMono-Regular",Consolas,monospace;
+  --sans:"Inter","HarmonyOS Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:#f4f5f7;color:var(--ink);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,p,ul,li,figure,dl,dd{margin:0}
+ul{padding:0;list-style:none}
+.page{background:#fff;width:min(100%,820px);margin:32px auto;padding:clamp(24px,4vw,44px) clamp(20px,4.4vw,52px);box-shadow:0 12px 40px rgba(16,20,26,.10)}
+.label{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+
+/* 头部 */
+.head{display:flex;justify-content:space-between;gap:24px;align-items:flex-start;padding-bottom:14px;border-bottom:2px solid var(--ink)}
+.head h1{font-family:var(--serif);font-size:27px;font-weight:600;letter-spacing:.06em;line-height:1.1}
+.head__en{font-family:var(--mono);font-size:9.5px;letter-spacing:.26em;color:var(--muted);margin-top:6px}
+.head__role{margin-top:8px;font-size:13.5px;color:var(--ink-2)}
+.head__role b{color:var(--accent);font-weight:600}
+.head__meta{margin-top:12px;display:grid;grid-template-columns:repeat(2,auto);gap:2px 28px;font-family:var(--mono);font-size:10.5px;color:var(--ink-2);justify-content:start}
+.head__meta span{display:flex;gap:6px}
+.head__meta i{font-style:normal;color:var(--muted)}
+.head figure{flex:0 0 auto;width:84px;border:1px solid var(--line)}
+.head img{width:100%;display:block}
+
+/* 区块 */
+.sec{margin-top:14px}
+.sec__head{display:flex;align-items:baseline;gap:10px;padding-bottom:5px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.sec__head h2{font-size:12px;font-weight:600;letter-spacing:.14em}
+.sec__head .label{color:var(--accent)}
+.sec__head span:last-child{margin-left:auto}
+
+.summary{font-size:12px;color:var(--ink-2);line-height:1.72}
+.summary b{color:var(--ink);font-weight:600}
+
+.row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 16px;padding:5px 0;border-bottom:1px dashed var(--line)}
+.row:last-child{border-bottom:0}
+.row__t{font-size:12.8px;font-weight:600}
+.row__s{font-size:11.5px;color:var(--muted);margin-top:2px}
+.row__d{font-family:var(--mono);font-size:10px;color:var(--muted);white-space:nowrap;padding-top:2px}
+.points{grid-column:1/-1;margin-top:5px;display:flex;flex-direction:column;gap:2px}
+.points li{position:relative;padding-left:11px;font-size:11.2px;color:var(--ink-2);line-height:1.7}
+.points li::before{content:"";position:absolute;left:0;top:.72em;width:4px;height:1px;background:var(--accent)}
+
+.cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 22px}
+.cols h3{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;margin-bottom:5px}
+.cols li{display:flex;justify-content:space-between;gap:8px;font-size:11.2px;color:var(--ink-2);padding:2.5px 0;border-bottom:1px dotted var(--line)}
+.cols li em{font-style:normal;font-family:var(--mono);font-size:9.5px;color:var(--muted)}
+
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 32px}
+.two .row{border-bottom:1px dashed var(--line)}
+
+.foot{margin-top:16px;padding-top:8px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;font-family:var(--mono);font-size:9.5px;color:var(--muted)}
+
+@page{size:A4;margin:10mm}
+@media print{
+  body{background:#fff}
+  .page{width:auto;margin:0;padding:0;box-shadow:none;zoom:.93}
+  .sec{margin-top:7pt;break-inside:auto}
+  .row{break-inside:avoid}
+  .cols li{break-inside:avoid}
+}
+@media (max-width:640px){
+  .head{flex-direction:row-reverse}
+  .head figure{width:74px}
+  .cols{grid-template-columns:1fr}
+  .two{grid-template-columns:1fr}
+  .head__meta{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="head">
+    <div>
+      <h1>肖杰</h1>
+      <p class="head__en">XIAO JIE</p>
+      <p class="head__role">软件开发实习 · <b>C++ / Java / JavaScript</b></p>
+      <div class="head__meta">
+        <span><i>邮箱</i> 2987963758@qq.com</span>
+        <span><i>手机 / 微信</i> 18174083061</span>
+        <span><i>GitHub</i> github.com/2wsxc</span>
+        <span><i>实习</i> 每周 4 天以上 · 3 个月起</span>
+      </div>
+    </div>
+    <figure><img src="assets/img/portrait.jpg" alt="肖杰"></figure>
+  </header>
+
+  <section class="sec">
+    <div class="sec__head"><span class="label">Profile</span><h2>个人简介</h2></div>
+    <p class="summary">湖北中医药大学医学信息工程 2028 届本科在读，主修数据结构与算法、数据库原理、软件工程、C++ 与 Java。<b>C++ 方向获第十六届蓝桥杯省级三等奖</b>。正在独立开发相机与手机的连接交互与同步工具（含监视器系统），从功能拆分到实现均由自己完成。同时长期承担活动与赛事影像拍摄与剪辑，熟悉 Premiere、Photoshop、Lightroom，具备 After Effects 与达芬奇的基础使用能力。</p>
+  </section>
+
+  <section class="sec">
+    <div class="sec__head"><span class="label">Education</span><h2>教育背景</h2></div>
+    <div class="row">
+      <p class="row__t">湖北中医药大学 · 医学信息工程 · 本科在读</p>
+      <span class="row__d">2028 届</span>
+      <ul class="points"><li>核心课程：数据结构、数据库原理、软件工程、C++ 程序设计、Java 开发</li></ul>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="sec__head"><span class="label">Projects</span><h2>项目经历</h2></div>
+
+    <div class="row">
+      <p class="row__t">相机—手机连接交互与同步工具（含监视器系统）</p>
+      <span class="row__d">2026 — 至今</span>
+      <p class="row__s">个人项目 · 独立开发</p>
+      <ul class="points">
+        <li>面向拍摄现场，实现相机与手机之间的连接、参数交互与素材同步</li>
+        <li>手机端作为监视器使用，替代外接监看设备，降低现场连线成本</li>
+        <li>按功能模块拆分代码，统一命名与目录结构，便于后续扩展与维护</li>
+      </ul>
+    </div>
+
+    <div class="row">
+      <p class="row__t">中医药文化宣传直播 · 设备运维与后期</p>
+      <span class="row__d">在校 · 2 个月</span>
+      <p class="row__s">校企合作项目</p>
+      <ul class="points">
+        <li>负责直播设备调试与现场运维，排查音视频链路与突发故障，保障直播不中断</li>
+        <li>承担直播切片剪辑，产出可二次传播的短视频素材</li>
+      </ul>
+    </div>
+
+    <div class="row">
+      <p class="row__t">校级活动与赛事影像交付</p>
+      <span class="row__d">2024 — 至今</span>
+      <p class="row__s">校学生会宣传部 / 自主接单</p>
+      <ul class="points">
+        <li>完成 7 场校级活动与会议的拍摄与成片交付，负责机位规划与选片</li>
+        <li>独立承接 2 场马拉松赛道拍摄，赛后按节点交付，累计收入约 1000 元</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="sec__head"><span class="label">Skills</span><h2>专业技能</h2></div>
+    <div class="cols">
+      <div>
+        <h3>语言与基础</h3>
+        <ul>
+          <li><span>C++</span><em>熟悉</em></li>
+          <li><span>Java</span><em>熟悉</em></li>
+          <li><span>JavaScript</span><em>掌握</em></li>
+          <li><span>SQL / 数据库</span><em>掌握</em></li>
+          <li><span>数据结构与算法</span><em>竞赛</em></li>
+        </ul>
+      </div>
+      <div>
+        <h3>工程习惯</h3>
+        <ul>
+          <li><span>模块拆分</span><em>按功能分层</em></li>
+          <li><span>命名与注释</span><em>统一约定</em></li>
+          <li><span>版本管理</span><em>Git</em></li>
+          <li><span>调试</span><em>先定位后改</em></li>
+        </ul>
+      </div>
+      <div>
+        <h3>影像工具</h3>
+        <ul>
+          <li><span>Premiere Pro</span><em>熟练</em></li>
+          <li><span>Photoshop</span><em>熟练</em></li>
+          <li><span>Lightroom</span><em>熟练</em></li>
+          <li><span>After Effects</span><em>基本</em></li>
+          <li><span>DaVinci Resolve</span><em>基本</em></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="sec__head"><span class="label">Honors</span><h2>荣誉与其他</h2></div>
+    <div class="two">
+      <div class="row">
+        <p class="row__t">第十六届蓝桥杯 · C++ 组 · 省级三等奖</p>
+        <span class="row__d">2025</span>
+      </div>
+      <div class="row">
+        <p class="row__t">校学生会宣传部摄影师 · 校级活动 7 场</p>
+        <span class="row__d">2024—2025</span>
+      </div>
+      <div class="row">
+        <p class="row__t">马拉松赛道摄影 · 独立接单 2 场</p>
+        <span class="row__d">2024—2025</span>
+      </div>
+      <div class="row">
+        <p class="row__t">个人影像作品与短片：B 站「虾条豆果」</p>
+        <span class="row__d">持续更新</span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <span>肖杰 · 软件开发实习简历 · 2026.11</span>
+    <span>2987963758@qq.com · 18174083061</span>
+  </footer>
+
+</div>
+</body>
+</html>
