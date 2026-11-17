@@ -112,9 +112,10 @@ h1{font-family:var(--serif);font-size:clamp(52px,8vw,104px);line-height:.96;font
 .series-card__in p{margin-top:3px;font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;color:rgba(255,255,255,.64)}
 .series-card:hover img{transform:scale(1.045)}
 .series-card:hover .series-card__go{opacity:1;transform:none}
-.all-works{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 16px;margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:var(--muted)}
-.all-works a{color:var(--ink);border-bottom:1px solid var(--line-2);padding-bottom:2px}
-.all-works a:hover{color:var(--accent);border-color:var(--accent)}
+.all-works{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 16px;margin-top:18px;padding-top:16px;border-top:1px solid var(--line);font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:var(--muted)}
+.works-cta{display:inline-flex;align-items:center;gap:9px;background:var(--accent);border:1px solid var(--accent);color:#06110d;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;padding:12px 22px;transition:.22s}
+.works-cta svg{width:14px;height:14px}
+.works-cta:hover{background:#aaf0da;border-color:#aaf0da;transform:translateY(-2px);box-shadow:0 10px 26px -12px rgba(143,227,200,.7)}
 
 /* 教育 */
 .edu{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
@@ -391,7 +392,13 @@ h1{font-family:var(--serif);font-size:clamp(52px,8vw,104px);line-height:.96;font
           <div class="series-card__in"><h3>单幅</h3><p>星空 · 城市 / 2024—2026</p></div>
         </a>
       </div>
-      <p class="all-works"><span>4 个系列 · 31 张照片 · 2 支短片</span><a href="works.html">查看完整作品集 →</a></p>
+      <div class="all-works">
+        <span>4 个系列 · 31 张照片 · 2 支短片</span>
+        <a class="works-cta" href="works.html">
+          查看完整作品集
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
     </div>
   </section>
 

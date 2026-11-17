@@ -70,6 +70,11 @@ ul,ol{padding:0;list-style:none}
 .film video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#000}
 .film figcaption{display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding:10px 12px;font-size:12.5px}
 .film figcaption span{font-family:var(--mono);font-size:10px;color:var(--muted)}
+.films__more{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 18px;margin-top:18px;padding-top:16px;border-top:1px solid var(--line);font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:var(--muted)}
+.films__more b{font-weight:400;color:var(--ink-2)}
+.films__more a{display:inline-flex;align-items:center;gap:8px;background:var(--accent);border:1px solid var(--accent);color:#06110d;font-size:11.5px;letter-spacing:.1em;padding:10px 18px;transition:.22s}
+.films__more a:hover{background:#aaf0da;border-color:#aaf0da;transform:translateY(-2px);box-shadow:0 10px 26px -12px rgba(143,227,200,.7)}
+.films__more svg{width:13px;height:13px}
 
 /* 底部 */
 .back{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:clamp(34px,4.6vw,56px) 0}
@@ -238,6 +243,13 @@ ul,ol{padding:0;list-style:none}
         <figcaption>延时视频<span>21.7s · 拍摄 · 剪辑</span></figcaption>
       </figure>
     </div>
+    <p class="films__more">
+      <span>更多短片与片段 · <b>B 站 · 虾条豆果</b></span>
+      <a href="https://space.bilibili.com/699969839" target="_blank" rel="noopener">
+        前往 B 站看更多
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+      </a>
+    </p>
   </section>
 
   <div class="wrap back">
