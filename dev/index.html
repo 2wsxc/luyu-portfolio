@@ -103,10 +103,18 @@ h1{font-family:var(--serif);font-size:clamp(52px,8vw,104px);line-height:.96;font
 .film video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#000}
 .film figcaption{display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding:10px 12px;font-size:12.5px}
 .film figcaption span{font-family:var(--mono);font-size:10px;color:var(--muted)}
-.shots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-.shots figure{margin:0;border:1px solid var(--line);overflow:hidden;background:var(--bg-2);aspect-ratio:4/5}
-.shots img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.22,1,.36,1);filter:saturate(.96)}
-.shots figure:hover img{transform:scale(1.05)}
+.series-links{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.series-card{position:relative;display:block;aspect-ratio:4/5;border:1px solid var(--line);overflow:hidden;background:var(--bg-2)}
+.series-card img{width:100%;height:100%;object-fit:cover;filter:saturate(.95);transition:transform .8s cubic-bezier(.22,1,.36,1)}
+.series-card__go{position:absolute;top:10px;right:10px;z-index:2;font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;color:var(--ink);background:rgba(10,11,13,.62);border:1px solid rgba(255,255,255,.28);padding:3px 7px;opacity:0;transform:translateY(-4px);transition:.3s}
+.series-card__in{position:absolute;inset:auto 0 0 0;padding:44px 14px 13px;background:linear-gradient(to top,rgba(6,7,9,.9),rgba(6,7,9,.3) 58%,transparent)}
+.series-card__in h3{font-family:var(--serif);font-size:15.5px;font-weight:500;letter-spacing:.05em}
+.series-card__in p{margin-top:3px;font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;color:rgba(255,255,255,.64)}
+.series-card:hover img{transform:scale(1.045)}
+.series-card:hover .series-card__go{opacity:1;transform:none}
+.all-works{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 16px;margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:var(--muted)}
+.all-works a{color:var(--ink);border-bottom:1px solid var(--line-2);padding-bottom:2px}
+.all-works a:hover{color:var(--accent);border-color:var(--accent)}
 
 /* 教育 */
 .edu{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
@@ -131,7 +139,7 @@ h1{font-family:var(--serif);font-size:clamp(52px,8vw,104px);line-height:.96;font
   .portrait{width:min(46%,190px)}
   .sec__head,.proj{grid-template-columns:1fr;gap:8px}
   .skill-grid,.films,.edu{grid-template-columns:1fr}
-  .shots{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .series-links{grid-template-columns:repeat(2,minmax(0,1fr))}
   .nav{display:none}
   .contact{grid-template-columns:1fr}
   .contact__side{text-align:left}
@@ -140,7 +148,7 @@ h1{font-family:var(--serif);font-size:clamp(52px,8vw,104px);line-height:.96;font
 @page{size:A4;margin:13mm}
 @media print{
   body{background:#fff;color:#111;background-image:none;font-size:9.6pt;line-height:1.5}
-  .top,.tags,.links,.hero__en,.status,.films,.shots,.foot,.chip,#works{display:none!important}
+  .top,.tags,.links,.hero__en,.status,.films,.series-links,.all-works,.foot,.chip,#works{display:none!important}
   .sec__sub{display:none!important}
   .wrap{width:100%}
   .hero{padding:0 0 6pt;border-bottom:1px solid #ddd}
@@ -179,7 +187,7 @@ h1{font-family:var(--serif);font-size:clamp(52px,8vw,104px);line-height:.96;font
       <a href="#projects">项目</a>
       <a href="#skills">技术</a>
       <a href="#works">影像</a>
-      <a href="#edu">教育</a>
+      <a href="works.html">作品集</a>
       <a href="resume.html">简历</a>
     </nav>
     <a class="top__cta" href="mailto:2987963758@qq.com">联系我 ↗</a>
@@ -347,7 +355,6 @@ h1{font-family:var(--serif);font-size:clamp(52px,8vw,104px);line-height:.96;font
         <span class="sec__no">03</span>
         <div>
           <h2>影像作品</h2>
-          <p class="sec__sub">业余时间一直在拍和剪——这也是 JD 里提到的那部分：从拍摄到剪辑的完整手感。</p>
         </div>
       </div>
 
@@ -362,14 +369,29 @@ h1{font-family:var(--serif);font-size:clamp(52px,8vw,104px);line-height:.96;font
         </figure>
       </div>
 
-      <div class="shots">
-        <figure><img src="assets/img/p1.jpg" alt="川西徒步拍摄"></figure>
-        <figure><img src="assets/img/p2.jpg" alt="珠峰与后藏"></figure>
-        <figure><img src="assets/img/p3.jpg" alt="武汉城市系列"></figure>
-        <figure><img src="assets/img/p4.jpg" alt="户外风光"></figure>
-        <figure><img src="assets/img/p5.jpg" alt="户外风光"></figure>
-        <figure><img src="assets/img/p6.jpg" alt="户外风光"></figure>
+      <div class="series-links">
+        <a class="series-card" href="works.html#dang-ling">
+          <img src="assets/img/works/w-501.jpg" alt="党龄的秋 系列" loading="lazy">
+          <span class="series-card__go">8 张 ↗</span>
+          <div class="series-card__in"><h3>党龄的秋</h3><p>四川 · 丹巴 / 2026 秋</p></div>
+        </a>
+        <a class="series-card" href="works.html#everest">
+          <img src="assets/img/works/w-512.jpg" alt="珠峰与后藏 系列" loading="lazy">
+          <span class="series-card__go">6 张 ↗</span>
+          <div class="series-card__in"><h3>珠峰与后藏</h3><p>西藏 · 定日 / 2026 春</p></div>
+        </a>
+        <a class="series-card" href="works.html#wuhan">
+          <img src="assets/img/works/w-521.jpg" alt="江城 系列" loading="lazy">
+          <span class="series-card__go">9 张 ↗</span>
+          <div class="series-card__in"><h3>江城</h3><p>湖北 · 武汉 / 2025—2026</p></div>
+        </a>
+        <a class="series-card" href="works.html#singles">
+          <img src="assets/img/works/w-531.jpg" alt="单幅 系列" loading="lazy">
+          <span class="series-card__go">8 张 ↗</span>
+          <div class="series-card__in"><h3>单幅</h3><p>星空 · 城市 / 2024—2026</p></div>
+        </a>
       </div>
+      <p class="all-works"><span>4 个系列 · 31 张照片 · 2 支短片</span><a href="works.html">查看完整作品集 →</a></p>
     </div>
   </section>
 

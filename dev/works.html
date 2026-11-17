@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>影像作品集 · 肖杰</title>
+<meta name="description" content="肖杰的完整影像作品集：党龄的秋、珠峰与后藏、江城武汉、单幅与短片，共 31 张照片与 2 支短片。">
+<meta name="theme-color" content="#0a0b0d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Noto+Serif+SC:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0b0d; --bg-2:#0f1114; --line:rgba(255,255,255,.10); --line-2:rgba(255,255,255,.22);
+  --ink:#eceff3; --ink-2:#b3bac3; --muted:#7c858f; --accent:#8fe3c8; --accent-dim:rgba(143,227,200,.12);
+  --mono:"JetBrains Mono","SFMono-Regular",Consolas,monospace;
+  --sans:"Inter","HarmonyOS Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --serif:"Noto Serif SC","Source Han Serif SC","Songti SC",serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.75;
+  -webkit-font-smoothing:antialiased;background-image:linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.022) 1px,transparent 1px);background-size:64px 64px}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+h1,h2,h3,p,ul,ol,li,figure,dl,dd{margin:0}
+ul,ol{padding:0;list-style:none}
+.mono{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.wrap{width:min(100% - 44px,1120px);margin-inline:auto}
+
+/* 顶部 */
+.top{position:sticky;top:0;z-index:20;background:rgba(10,11,13,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.top__in{display:flex;align-items:center;justify-content:space-between;height:58px}
+.brand{display:flex;align-items:baseline;gap:10px;font-family:var(--serif);font-size:17px;letter-spacing:.06em}
+.brand em{font-family:var(--mono);font-style:normal;font-size:9.5px;letter-spacing:.24em;color:var(--muted)}
+.nav{display:flex;gap:22px;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;color:var(--ink-2)}
+.nav a:hover{color:var(--accent)}
+.top__cta{border:1px solid var(--line-2);padding:7px 14px;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;transition:.2s}
+.top__cta:hover{border-color:var(--accent);color:var(--accent)}
+
+/* 页头 */
+.head{padding:clamp(42px,6vw,80px) 0 clamp(26px,4vw,44px);border-bottom:1px solid var(--line)}
+.head__meta{display:flex;flex-wrap:wrap;gap:6px 26px;margin-top:20px;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;color:var(--muted)}
+.head h1{font-family:var(--serif);font-size:clamp(38px,6.4vw,76px);line-height:1.04;font-weight:500;letter-spacing:.05em;margin-top:14px}
+.head__lede{margin-top:16px;max-width:56ch;font-size:13.8px;line-height:1.95;color:var(--ink-2)}
+
+/* 系列索引 */
+.jump{display:flex;flex-wrap:wrap;gap:8px;padding:20px 0 0}
+.jump a{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line-2);padding:6px 12px;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:var(--ink-2);transition:.2s}
+.jump a span{color:var(--muted)}
+.jump a:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-dim)}
+
+/* 系列 */
+.series{padding:clamp(34px,4.6vw,58px) 0;border-bottom:1px solid var(--line);scroll-margin-top:70px}
+.series__head{display:grid;grid-template-columns:96px minmax(0,1fr);gap:20px;align-items:baseline;margin-bottom:22px}
+.series__no{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--accent)}
+.series__head h2{font-family:var(--serif);font-size:clamp(20px,2.5vw,28px);font-weight:500;letter-spacing:.04em}
+.series__sub{margin-top:5px;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:var(--muted)}
+.grid{columns:3;column-gap:12px}
+.grid figure{position:relative;margin:0 0 12px;break-inside:avoid;border:1px solid var(--line);background:var(--bg-2);overflow:hidden;cursor:zoom-in}
+.grid img{width:100%;height:auto;filter:saturate(.96);transition:transform .8s cubic-bezier(.22,1,.36,1),filter .5s}
+.grid figure:hover img{transform:scale(1.035);filter:saturate(1)}
+.grid figcaption{position:absolute;inset:auto 0 0 0;padding:26px 12px 10px;background:linear-gradient(to top,rgba(0,0,0,.78),rgba(0,0,0,.28) 55%,transparent);font-size:12.5px;line-height:1.5;opacity:0;transform:translateY(6px);transition:.35s}
+.grid figure:hover figcaption,.grid figure:focus-within figcaption{opacity:1;transform:none}
+.grid figcaption span{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;color:rgba(255,255,255,.62);margin-top:2px}
+
+/* 短片 */
+.films{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.film{border:1px solid var(--line);background:var(--bg-2);overflow:hidden}
+.film video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#000}
+.film figcaption{display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding:10px 12px;font-size:12.5px}
+.film figcaption span{font-family:var(--mono);font-size:10px;color:var(--muted)}
+
+/* 底部 */
+.back{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:clamp(34px,4.6vw,56px) 0}
+.back a{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--ink-2);border-bottom:1px solid var(--line-2);padding-bottom:2px}
+.back a:hover{color:var(--accent);border-color:var(--accent)}
+.foot{padding:0 0 44px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:var(--muted)}
+
+/* 灯箱 */
+.lb{position:fixed;inset:0;z-index:60;display:none;align-items:center;justify-content:center;padding:5vh 4vw;background:rgba(6,7,9,.94);backdrop-filter:blur(6px)}
+.lb[aria-hidden="false"]{display:flex}
+.lb__body{display:flex;flex-direction:column;align-items:center;max-width:100%;max-height:90vh}
+.lb img{max-width:100%;max-height:80vh;width:auto;height:auto;object-fit:contain;border:1px solid rgba(255,255,255,.14)}
+.lb__cap{margin-top:14px;text-align:center;font-size:12.5px;color:var(--ink-2)}
+.lb__cap span{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:var(--muted);margin-top:4px}
+.lb__close,.lb__prev,.lb__next{position:absolute;border:1px solid var(--line-2);background:rgba(10,11,13,.7);color:var(--ink);font-family:var(--mono);font-size:12px;letter-spacing:.08em;padding:8px 12px;cursor:pointer;transition:.2s}
+.lb__close:hover,.lb__prev:hover,.lb__next:hover{border-color:var(--accent);color:var(--accent)}
+.lb__close{top:20px;right:20px}
+.lb__prev{left:20px;top:50%;transform:translateY(-50%)}
+.lb__next{right:20px;top:50%;transform:translateY(-50%)}
+.lb__count{position:absolute;left:20px;top:24px;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;color:var(--muted)}
+
+@media (max-width:900px){
+  .grid{columns:2}
+  .series__head{grid-template-columns:1fr;gap:8px}
+  .films{grid-template-columns:1fr}
+  .nav{display:none}
+}
+@media (max-width:520px){
+  .grid{columns:1}
+  .lb__prev,.lb__next{padding:6px 10px;font-size:11px}
+}
+@media (prefers-reduced-motion:reduce){
+  .grid img,.grid figcaption{transition:none}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top__in">
+    <a class="brand" href="index.html">肖杰<em>XIAO JIE</em></a>
+    <nav class="nav">
+      <a href="index.html#projects">项目</a>
+      <a href="index.html#skills">技术</a>
+      <a href="index.html#works">影像</a>
+      <a href="resume.html">简历</a>
+    </nav>
+    <a class="top__cta" href="mailto:2987963758@qq.com">联系我 ↗</a>
+  </div>
+</header>
+
+<main>
+  <section class="wrap head">
+    <p class="mono">PORTFOLIO / 2024 — 2026</p>
+    <h1>影像作品集</h1>
+    <p class="head__lede">四年里走过的地方，按系列整理在这里：从川西的秋色到珠峰的清晨，从江城的蓝调到单幅的零散记录，另有两条徒步与延时短片。</p>
+    <div class="head__meta">
+      <span>31 张照片</span>
+      <span>2 支短片</span>
+      <span>4 个系列</span>
+      <span>拍摄 · 选片 · 调色</span>
+    </div>
+    <nav class="jump">
+      <a href="#dang-ling"><span>01</span>党龄的秋</a>
+      <a href="#everest"><span>02</span>珠峰与后藏</a>
+      <a href="#wuhan"><span>03</span>江城</a>
+      <a href="#singles"><span>04</span>单幅</a>
+      <a href="#films"><span>05</span>短片</a>
+    </nav>
+  </section>
+
+  <section class="series wrap" id="dang-ling">
+    <div class="series__head">
+      <span class="series__no">01</span>
+      <div>
+        <h2>党龄的秋</h2>
+        <p class="series__sub">四川 · 丹巴党龄 / 2026 秋 / 8 张</p>
+      </div>
+    </div>
+    <div class="grid">
+      <figure><img src="assets/img/works/w-501.jpg" alt="党龄的秋" loading="lazy"><figcaption>党龄的秋<span>四川 · 丹巴党龄</span></figcaption></figure>
+      <figure><img src="assets/img/works/w-507.jpg" alt="夏羌拉主峰" loading="lazy"><figcaption>夏羌拉主峰<span>四川 · 丹巴党龄</span></figcaption></figure>
+      <figure><img src="assets/img/works/w-504.jpg" alt="葫芦海" loading="lazy"><figcaption>葫芦海<span>四川 · 丹巴党龄</span></figcaption></figure>
+      <figure><img src="assets/img/works/w-503.jpg" alt="进沟的路" loading="lazy"><figcaption>进沟的路<span>四川 · 丹巴党龄</span></figcaption></figure>
+      <figure><img src="assets/img/works/w-506.jpg" alt="甲玉拉措" loading="lazy"><figcaption>甲玉拉措<span>四川 · 丹巴党龄</span></figcaption></figure>
+      <figure><img src="assets/img/works/w-502.jpg" alt="山谷人家" loading="lazy"><figcaption>山谷人家<span>四川 · 丹巴党龄</span></figcaption></figure>
+      <figure><img src="assets/img/works/w-508.jpg" alt="夏羌拉群峰" loading="lazy"><figcaption>夏羌拉群峰<span>四川 · 丹巴党龄</span></figcaption></figure>
+      <figure><img src="assets/img/works/w-505.jpg" alt="葫芦海 · 静水" loading="lazy"><figcaption>葫芦海 · 静水<span>四川 · 丹巴党龄</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="series wrap" id="everest">
+    <div class="series__head">
+      <span class="series__no">02</span>
+      <div>
+        <h2>珠峰与后藏</h2>
+        <p class="series__sub">西藏 · 定日 / 2026 春 / 6 张</p>
+      </div>
+    </div>
+    <div class="grid">
+      <figure><img src="assets/img/works/w-512.jpg" alt="日照金山" loading="lazy"><figcaption>日照金山<span>西藏 · 定日</span></figcaption></figure>
+      <figure><img src="assets/img/works/w-511.jpg" alt="珠峰大本营" loading="lazy"><figcaption>珠峰大本营<span>西藏 · 定日</span></figcaption></figure>
+      <figure><img src="assets/img/works/w-515.jpg" alt="八廓街" loading="lazy"><figcaption>八廓街<span>西藏 · 拉萨</span></figcaption></figure>
+      <figure><img src="assets/img/works/w-513.jpg" alt="羊卓雍错" loading="lazy"><figcaption>羊卓雍错<span>西藏 · 山南</span></figcaption></figure>
+      <figure><img src="assets/img/works/w-514.jpg" alt="一个人的高原" loading="lazy"><figcaption>一个人的高原<span>西藏 · 318 国道</span></figcaption></figure>
+      <figure><img src="assets/img/works/w-516.jpg" alt="青藏铁路沿线" loading="lazy"><figcaption>青藏铁路沿线<span>青海 · 青藏线</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="series wrap" id="wuhan">
+    <div class="series__head">
+      <span class="series__no">03</span>
+      <div>
+        <h2>江城</h2>
+        <p class="series__sub">湖北 · 武汉 / 2025 — 2026 / 9 张</p>
+      </div>
+    </div>
+    <div class="grid">
+      <figure><img src="assets/img/works/w-521.jpg" alt="江城蓝调" loading="lazy"><figcaption>江城蓝调<span>湖北 · 武汉</span></figcaption></figure>
+      <figure><img src="assets/img/works/w-527.jpg" alt="黄鹤楼" loading="lazy"><figcaption>黄鹤楼<span>湖北 · 武汉</span></figcaption></figure>
+      <figure><img src="assets/img/works/w-524.jpg" alt="汉口" loading="lazy"><figcaption>汉口<span>湖北 · 武汉</span></figcaption></figure>
+      <figure><img src="assets/img/works/w-529.jpg" alt="汉江日落" loading="lazy"><figcaption>汉江日落<span>湖北 · 武汉</span></figcaption></figure>
+      <figure><img src="assets/img/works/w-526.jpg" alt="站台" loading="lazy"><figcaption>站台<span>湖北 · 武汉</span></figcaption></figure>
+      <figure><img src="assets/img/works/w-522.jpg" alt="江滩蓝调" loading="lazy"><figcaption>江滩蓝调<span>湖北 · 武汉</span></figcaption></figure>
+      <figure><img src="assets/img/works/w-528.jpg" alt="古德寺" loading="lazy"><figcaption>古德寺<span>湖北 · 武汉</span></figcaption></figure>
+      <figure><img src="assets/img/works/w-523.jpg" alt="江上的桥" loading="lazy"><figcaption>江上的桥<span>湖北 · 武汉</span></figcaption></figure>
+      <figure><img src="assets/img/works/w-525.jpg" alt="武昌" loading="lazy"><figcaption>武昌<span>湖北 · 武汉</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="series wrap" id="singles">
+    <div class="series__head">
+      <span class="series__no">04</span>
+      <div>
+        <h2>单幅</h2>
+        <p class="series__sub">各地 / 2024 — 2026 / 8 张</p>
+      </div>
+    </div>
+    <div class="grid">
+      <figure><img src="assets/img/works/w-531.jpg" alt="夏季银河" loading="lazy"><figcaption>夏季银河<span>四川 · 川西</span></figcaption></figure>
+      <figure><img src="assets/img/works/w-535.jpg" alt="厦门海岸" loading="lazy"><figcaption>厦门海岸<span>福建 · 厦门</span></figcaption></figure>
+      <figure><img src="assets/img/works/w-537.jpg" alt="无题 · 一" loading="lazy"><figcaption>无题 · 一<span>2026</span></figcaption></figure>
+      <figure><img src="assets/img/works/w-533.jpg" alt="南昌" loading="lazy"><figcaption>南昌<span>江西 · 南昌</span></figcaption></figure>
+      <figure><img src="assets/img/works/w-532.jpg" alt="英仙座流星雨" loading="lazy"><figcaption>英仙座流星雨<span>四川 · 川西</span></figcaption></figure>
+      <figure><img src="assets/img/works/w-536.jpg" alt="日落剪影" loading="lazy"><figcaption>日落剪影<span>湖北 · 武汉</span></figcaption></figure>
+      <figure><img src="assets/img/works/w-534.jpg" alt="赣州日出" loading="lazy"><figcaption>赣州日出<span>江西 · 赣州</span></figcaption></figure>
+      <figure><img src="assets/img/works/w-538.jpg" alt="无题 · 二" loading="lazy"><figcaption>无题 · 二<span>2026</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="series wrap" id="films">
+    <div class="series__head">
+      <span class="series__no">05</span>
+      <div>
+        <h2>短片</h2>
+        <p class="series__sub">拍摄 / 剪辑 / 调色 · 2 支</p>
+      </div>
+    </div>
+    <div class="films">
+      <figure class="film">
+        <video src="assets/video/w-601.mp4" poster="assets/img/poster-601.jpg" controls preload="metadata" playsinline></video>
+        <figcaption>《党龄 · 夏羌拉》徒步短片<span>24s · 剪辑 · 调色</span></figcaption>
+      </figure>
+      <figure class="film">
+        <video src="assets/video/w-602.mp4" poster="assets/img/poster-602.jpg" controls preload="metadata" playsinline></video>
+        <figcaption>延时视频<span>21.7s · 拍摄 · 剪辑</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="wrap back">
+    <a href="index.html#works">← 返回首页影像</a>
+    <a href="resume.html">查看简历 →</a>
+  </div>
+</main>
+
+<footer class="wrap foot">
+  <span>© 2026 肖杰</span>
+  <span>本站作品版权归作者所有，未经授权请勿转载或商用</span>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="作品大图" aria-hidden="true">
+  <span class="lb__count" id="lbCount"></span>
+  <button class="lb__close" type="button" data-lb-close>关闭 ESC</button>
+  <button class="lb__prev" type="button" data-lb-prev>← 上一张</button>
+  <button class="lb__next" type="button" data-lb-next>下一张 →</button>
+  <div class="lb__body">
+    <img id="lbImg" src="" alt="">
+    <div class="lb__cap"><span id="lbCap"></span></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var figs = Array.prototype.slice.call(document.querySelectorAll('.grid figure'));
+  var lb = document.getElementById('lb');
+  var img = document.getElementById('lbImg');
+  var cap = document.getElementById('lbCap');
+  var cnt = document.getElementById('lbCount');
+  var i = 0, lastFocus = null;
+
+  function show(n){
+    i = (n + figs.length) % figs.length;
+    var f = figs[i];
+    var src = f.querySelector('img');
+    var c = f.querySelector('figcaption');
+    img.src = src.src;
+    img.alt = src.alt;
+    var t = c ? c.firstChild.textContent.trim() : '';
+    var s = c && c.querySelector('span') ? c.querySelector('span').textContent.trim() : '';
+    cap.textContent = s ? t + ' · ' + s : t;
+    cnt.textContent = (i + 1) + ' / ' + figs.length;
+    lb.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+  function hide(){
+    lb.setAttribute('aria-hidden', 'true');
+    img.src = '';
+    document.body.style.overflow = '';
+    if (lastFocus) lastFocus.focus();
+  }
+
+  figs.forEach(function(f, n){
+    f.setAttribute('tabindex', '0');
+    f.setAttribute('role', 'button');
+    f.addEventListener('click', function(){ lastFocus = f; show(n); });
+    f.addEventListener('keydown', function(e){
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); lastFocus = f; show(n); }
+    });
+  });
+
+  lb.querySelector('[data-lb-close]').addEventListener('click', hide);
+  lb.querySelector('[data-lb-prev]').addEventListener('click', function(){ show(i - 1); });
+  lb.querySelector('[data-lb-next]').addEventListener('click', function(){ show(i + 1); });
+  lb.addEventListener('click', function(e){ if (e.target === lb) hide(); });
+  document.addEventListener('keydown', function(e){
+    if (lb.getAttribute('aria-hidden') === 'true') return;
+    if (e.key === 'Escape') hide();
+    if (e.key === 'ArrowLeft') show(i - 1);
+    if (e.key === 'ArrowRight') show(i + 1);
+  });
+})();
+</script>
+
+</body>
+</html>
