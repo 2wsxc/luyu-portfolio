@@ -89,6 +89,8 @@ h1{font-family:var(--serif);font-size:clamp(52px,8vw,104px);line-height:.96;font
 .proj__media img{width:100%;height:100%;object-fit:cover}
 .proj__media .p{width:96px;aspect-ratio:3/4}
 .proj__media .w{width:168px;aspect-ratio:3/2}
+.proj__link{display:inline-flex;align-items:center;gap:7px;margin-top:14px;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--accent);border-bottom:1px solid rgba(143,227,200,.45);padding-bottom:2px;transition:.2s}
+.proj__link:hover{color:#aaf0da;border-color:#aaf0da}
 
 /* 技能 */
 .skill-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 48px}
@@ -168,6 +170,7 @@ h1{font-family:var(--serif);font-size:clamp(52px,8vw,104px);line-height:.96;font
   .proj__list{margin-top:3pt;gap:2pt}
   .proj__list li{font-size:8.8pt;line-height:1.6}
   .proj__media{display:none}
+  .proj__link{display:none!important}
   .skill-grid{gap:4pt 10mm}
   .kv{padding:3pt 0;font-size:8.8pt}
   .kv span:last-child{color:#666}
@@ -203,10 +206,11 @@ h1{font-family:var(--serif);font-size:clamp(52px,8vw,104px);line-height:.96;font
         <h1>肖杰</h1>
         <p class="hero__en">XIAO JIE · SOFTWARE ENGINEERING INTERN</p>
         <p class="role">软件开发实习 · <b>C++ / Java / JavaScript</b> · 影像后期</p>
-        <p class="lede">医学信息工程 2028 届本科在读，主修数据结构与算法、数据库原理、软件工程、C++ 与 Java。C++ 方向获第十六届蓝桥杯省级三等奖。正在独立开发相机与手机的连接交互与同步工具（含监视器系统）。同时长期承担校内外影像拍摄与剪片，熟悉 Premiere、Photoshop、Lightroom，能用 After Effects 与达芬奇做包装与调色。</p>
+        <p class="lede">医学信息工程 2028 届本科在读，主修数据结构与算法、数据库原理、软件工程、C++ 与 Java。C++ 方向获第十六届蓝桥杯省级三等奖。独立开发 Android 相册应用「拾光相册」（Kotlin，本地优先，已可运行），并在推进相机与手机的连接交互与同步工具（含监视器系统）。同时长期承担校内外影像拍摄与剪片，熟悉 Premiere、Photoshop、Lightroom，能用 After Effects 与达芬奇做包装与调色。</p>
         <div class="tags">
           <span class="tag on">C++</span>
           <span class="tag on">Java</span>
+          <span class="tag">Kotlin</span>
           <span class="tag">JavaScript</span>
           <span class="tag">数据结构与算法</span>
           <span class="tag">数据库 / SQL</span>
@@ -241,6 +245,29 @@ h1{font-family:var(--serif);font-size:clamp(52px,8vw,104px);line-height:.96;font
           <p class="sec__sub">从底层连接到成片交付：写工具、调设备、剪片子，都是自己从头跑到尾。</p>
         </div>
       </div>
+
+      <article class="proj">
+        <p class="proj__meta"><b>2026 — 至今</b>独立开发</p>
+        <div>
+          <div class="proj__head">
+            <h3 class="proj__title">拾光相册 · Android 本地优先相册应用</h3>
+            <span class="proj__kind">Kotlin · 已可运行</span>
+          </div>
+          <ul class="proj__list">
+            <li>Kotlin + Android SDK 34 独立开发：时间轴三列网格、作品墙瀑布流、专题组照与沉浸式查看</li>
+            <li>按界面 / 组件 / 数据 / 模型分层，界面不直接访问 MediaStore，数据层不感知 View；12 项需求全部落地</li>
+            <li>不依赖厂商 SDK，解析 Google、小米、荣耀 / 华为、三星四类实况照片协议；修复瀑布流尺寸错乱、长按失灵、月历跳月等问题</li>
+          </ul>
+          <div class="proj__stack">
+            <span class="chip">Kotlin</span>
+            <span class="chip">Android SDK 34</span>
+            <span class="chip">SQLite</span>
+            <span class="chip">MediaStore / Glide</span>
+            <span class="chip">本地优先</span>
+          </div>
+          <a class="proj__link" href="https://37kaoshlddek8jzxzjg.traesite.cn" target="_blank" rel="noopener">在线演示与软件介绍 ↗</a>
+        </div>
+      </article>
 
       <article class="proj">
         <p class="proj__meta"><b>2026 — 至今</b>个人项目</p>
@@ -318,6 +345,7 @@ h1{font-family:var(--serif);font-size:clamp(52px,8vw,104px);line-height:.96;font
           <h3>语言 / 基础</h3>
           <div class="kv"><span><strong>C++</strong> · 课程 + 蓝桥杯省三</span><span>熟悉</span></div>
           <div class="kv"><span><strong>Java</strong> · 面向对象课程</span><span>熟悉</span></div>
+          <div class="kv"><span><strong>Kotlin</strong> · 拾光相册 Android 端</span><span>掌握</span></div>
           <div class="kv"><span><strong>JavaScript</strong> · 站点与交互实现</span><span>掌握</span></div>
           <div class="kv"><span><strong>SQL</strong> · 数据库原理</span><span>掌握</span></div>
           <div class="kv"><span>数据结构与算法</span><span>课程 + 竞赛</span></div>
