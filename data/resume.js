@@ -4,7 +4,7 @@
 
   window.SITE_DATA.resume = {
     intent: {
-      role: "摄影 / 摄像",
+      role: "硬件产品实习生",
       city: "任意，可随时到岗",
       start: "在校期间可实习，2028 年毕业后可全职",
       type: "实习 / 全职"
